@@ -4,10 +4,10 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
-// Use app.all to match HTTP requests
+// Use app.use to match HTTP requests
 
     // if else checks that /gets only accepts GET request
-    app.all('/gets', function(request, response) {
+    app.use('/gets', function(request, response) {
         if(request.method == 'GET') {
             // checks to see if query parameter is empty or not
             // by checking the request query's length
@@ -27,7 +27,7 @@ var path = require('path');
 
 // Everything below is similar to the above for GET, except it is for POST, PUT, and DELETE
     // if else checks that /posts only accepts POST request
-    app.all('/posts', function(request,response) {
+    app.use('/posts', function(request,response) {
         if(request.method == 'POST') {
             if(Object.keys(request.query).length !== 0) {
                 response.send(request.query);
@@ -42,7 +42,7 @@ var path = require('path');
     });
 
     // if else checks that /puts only accepts PUT request
-    app.all('/puts', function(request,response) {
+    app.use('/puts', function(request,response) {
         if(request.method == 'PUT') {
             if(Object.keys(request.query).length !== 0) {
                 response.send(request.query);
@@ -57,7 +57,7 @@ var path = require('path');
     });
 
     // if else checks that /deletes only accepts DELETE request
-    app.all('/deletes', function(request,response) {
+    app.use('/deletes', function(request,response) {
         if(request.method == 'DELETE') {
             if(Object.keys(request.query).length !== 0) {
                 response.send(request.query);
