@@ -17,6 +17,7 @@ var path = require('path');
                 response.send('GET request accepted; No query parameters sent in');
             }
         }
+        // If request is not GET for /gets, reject
         else {
             response.send('Request rejected! Request does not support HTTP method');
         }
@@ -32,6 +33,7 @@ var path = require('path');
                 response.send('POST request accepted; No query parameters sent in');
             }
         }
+        // If request is not POST for /posts, reject
         else {
             response.send('Request rejected! Request does not support HTTP method');
         }
@@ -47,6 +49,7 @@ var path = require('path');
                 response.send('PUT request accepted; No query parameters sent in');
             }
         }
+        // If request is not PUT for /puts, reject
         else {
             response.send('Request rejected! Request does not support HTTP method');
         }
@@ -62,6 +65,7 @@ var path = require('path');
                 response.send('DELETE request accepted; No query parameters sent in');
             }
         }
+        // If request is not DELETE for /deletes, reject
         else {
             response.send('Request rejected! Request does not support HTTP method');
         }
@@ -69,3 +73,36 @@ var path = require('path');
 
 app.listen(3333);
 console.log('Go to http://localhost:3333');
+
+
+
+
+/* First app.js
+if(request.method == 'GET') {
+    app.get('/', function(request,response) {
+        response.send(request.query);
+    }
+}
+
+else if(request.method == 'POST') {
+    app.post('/', function(request,response) {
+        response.send(request.query);
+    }
+}
+
+else if(request.method == 'PUT') {
+    app.put('/', function(request,response) {
+        response.send(request.query);
+    }
+}
+
+else if(request.method == 'DELETE') {
+    app.delete('/', function(request,response) {
+        response.send(request.query);
+    }
+}
+
+else {
+    response.send('Request rejected! Request does not support HTTP method');
+}
+*/
