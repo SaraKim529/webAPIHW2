@@ -1,0 +1,9 @@
+{
+  "name": "assignment2",
+  "description": "Assignment 2 Node.js Server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}

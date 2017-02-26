@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="Assignment2">
+    <Basepaths>/assignment2</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1488086521415</CreatedAt>
+    <CreatedBy>sara.kim@ucdenver.edu</CreatedBy>
+    <Description>Assignment 2-node.js server</Description>
+    <DisplayName>Assignment2</DisplayName>
+    <LastModifiedAt>1488107547770</LastModifiedAt>
+    <LastModifiedBy>sara.kim@ucdenver.edu</LastModifiedBy>
+    <Policies/>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>node://app.js</Resource>
+        <Resource>node://package.json</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>
